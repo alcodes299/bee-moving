@@ -5,4 +5,4 @@ Were trying to save the freaking bees here!
  ActiveRecord
 
  :D second commit of the proj
- [![Build Status](https://codeship.com/projects/bee-moving/status?branch=master)
+ [![Build Status](https://codeship.com/projects/bee_moving/status?branch=master)
