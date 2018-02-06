@@ -1,0 +1,13 @@
+<div class="walks">
+  <h3>Local nature walks</h3>
+  <% @walks.each do |w| %>
+  <div id="oneWalk">
+  <p>
+    <div id="walkTitle">
+      <%= w.title %>
+    </div>
+    "<%= w.description %>"
+  </p>
+</div>
+  <% end %>
+</div>

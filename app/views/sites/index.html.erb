@@ -1,0 +1,22 @@
+<div class="sites">
+  <h1>sites</h1>
+  <% @sites.each do |s| %>
+  <% if(s.claimed) %>
+  <% echo = "claimed" %>
+  <% end %>
+  <div id="siteHolder">
+    <p>
+      <%= s.title %>
+      <div id="spanIt">
+        <%= echo %>
+      </div>
+      <div id="siteBox">
+        Description: <%= s.description %>
+        <div id="sitelocation">
+          GPS: <%= s.location %>
+        </div>
+      </div>
+    </div>
+  </p>
+  <% end %>
+</div>
