@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'Launchy'
+
 
 feature 'user signs in', %Q{
   As a signed up user

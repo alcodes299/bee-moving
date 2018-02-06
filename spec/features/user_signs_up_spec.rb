@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'Launchy'
+
 
 feature 'user registers', %Q{
   As a visitor
