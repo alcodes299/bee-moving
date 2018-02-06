@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'Launchy'
 
 feature 'user registers', %Q{
   As a visitor
@@ -14,10 +15,12 @@ feature 'user registers', %Q{
 
   scenario 'provide valid registration information' do
     visit new_user_registration_path
-
+    fill_in 'User name', with: "user1"
+    fill_in 'Zipcode', with: "12345"
     fill_in 'Email', with: 'john@example.com'
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
+
 
     click_button 'Sign up'
 
