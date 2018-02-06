@@ -5,4 +5,4 @@ Were trying to save the freaking bees here!
  ActiveRecord
 
  :D second commit of the proj
- [![Build Status](https://codeship.com/projects/270750/status?branch=all-the-badges)
+ [![Build Status](https://codeship.com/projects/cdc64fd0-edaf-0135-ffb3-5e26c555ea1d/status?branch=all-the-badges)
