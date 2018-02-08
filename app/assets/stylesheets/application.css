@@ -20,8 +20,7 @@
    background-size: cover;
    background-repeat: no-repeat;
  }
- #skecty {
- }
+
  #oneWalk{
    border: 3px solid black;
    background: white;
@@ -47,4 +46,52 @@
  }
  #spanIt{
    text-align: right;
+ }
+ #skecty {
+   text-align: center;
+   background: linear-gradient(white, lightgreen 30%);
+   width: 600px;
+   margin: auto;
+   border-radius: 10px
+ }
+ #mainNavLeft{
+   background: #A240FF;
+   border-left: 2px solid #4114CC;
+   border-right: 2px solid #4114CC;
+   margin: 5px;
+ }
+ #mainNavLeft a{
+   color: #9EFF00;
+ }
+ #mainNavBees{
+   background: #A240FF;
+   border-left: 2px solid #4114CC;
+   border-right: 2px solid #4114CC;
+   margin: 5px;
+ }
+ #mainNavBees a{
+color: #9EFF00;
+ }
+ #mainNavRight a{
+   color: #9EFF00;
+ }
+
+ #mainNavHike a{
+   color: #9EFF00;
+ }
+ #mainNavHike{
+   background: #A240FF;
+   border-left: 2px solid #4114CC;
+   border-right: 2px solid #4114CC;
+   margin: 5px;
+ }
+ #mainNavRight{
+   background: #A240FF;
+   border-left: 2px solid #4114CC;
+   border-right: 2px solid #4114CC;
+   margin: 5px;
+ }
+ #linkRight{
+   text-align: right;
+   font-size: 10px;
  }
