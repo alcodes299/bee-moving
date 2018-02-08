@@ -2,12 +2,19 @@
   <h3>Local nature walks</h3>
   <% @walks.each do |w| %>
   <div id="oneWalk">
-  <p>
-    <div id="walkTitle">
-      <%= w.title %>
-    </div>
-    "<%= w.description %>"
-  </p>
-</div>
+    <p>
+      <div id="walkTitle">
+        <%= w.title %>
+      </div>
+      "<%= w.description %>"
+    </p>
+      <div id="linkRight">
+        <%= link_to "to show page", walk_path(w) %>
+      </div>
+  </div>
   <% end %>
+</div>
+<div class="test">
+  <%= link_to "Add New walk", new_users_walk_path %>
+
 </div>
