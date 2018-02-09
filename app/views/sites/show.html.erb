@@ -1,0 +1,11 @@
+<div class="siteShow">
+  <h1>siteshowpagetobe</h1>
+  <%= @site.title %>
+  <%= @site.location %>
+  <%= @site.description %>
+  <%= @site.claimed %>
+  <br>
+  <%= link_to "Edit site", "/sites/#{@site.id}/edit" %>
+  <br>
+  <%= link_to "Delete", site_path(@site), method: :delete, data:{confirm: "You sure?"}  %>
+</div>

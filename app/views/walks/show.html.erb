@@ -13,3 +13,12 @@
  <%= link_to "Delete", walk_path(@walk), method: :delete, data:{confirm: "You sure?"}  %>
  <%= link_to "Edit Walk", "/walks/#{@walk.id}/edit" %>
 </p>
+<div class="siteShow">
+  <h5><strong>Bee sites along this walk</strong></h5>
+  <% @sites.each do |s| %>
+   <ul>
+     <li><%= s.title %></li>
+   </ul>
+  <% end %>
+  <%= link_to "Add New Site", new_site_path %>
+</div>

@@ -5,6 +5,9 @@ class WalksController < ApplicationController
 
   def show
     @walk = Walk.find(params[:id])
+    @sites = Site.all
+    #walk.walk_params
+    #user = current user
   end
 
   def new

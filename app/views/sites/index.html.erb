@@ -1,8 +1,10 @@
 <div class="sites">
   <h1>sites</h1>
   <% @sites.each do |s| %>
-  <% if(s.claimed) %>
-  <% echo = "claimed" %>
+    <% if(s.claimed) %>
+    <% echo = "claimed" %>
+    <% else %>
+    <% echo= "unclaimed"%>
   <% end %>
   <div id="siteHolder">
     <p>
@@ -15,8 +17,12 @@
         <div id="sitelocation">
           GPS: <%= s.location %>
         </div>
+        <%= link_to "to show page", site_path(s) %>
       </div>
     </div>
   </p>
   <% end %>
+</div>
+<div class="newSite">
+  <%= link_to "Add New Site", new_site_path %>
 </div>
