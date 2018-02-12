@@ -1,28 +1,36 @@
+<body id="noFun">
 <div class="sites">
   <h1>sites</h1>
   <% @sites.each do |s| %>
-    <% if(s.claimed) %>
-    <% echo = "claimed" %>
-    <% else %>
-    <% echo= "unclaimed"%>
+  <% if(s.claimed) %>
+  <% echo = "claimed" %>
+  <% else %>
+  <% echo= "unclaimed"%>
   <% end %>
   <div id="siteHolder">
-    <p>
-      <%= s.title %>
-      <div id="spanIt">
-        <%= echo %>
-      </div>
-      <div id="siteBox">
-        Description: <%= s.description %>
-        <div id="sitelocation">
-          GPS: <%= s.location %>
-        </div>
-        <%= link_to "to show page", site_path(s) %>
-      </div>
+    <div>
+      <div id="siteTitle"><%= s.title %></div>
+      <span id="spanIt">
+        <span id="showButton">
+          <%= link_to "to show page", site_path(s), :id => "siteBox"%>
+        </span>
+        <span id='showDescription'>
+          Description: <%= s.description %>
+        </span>
+        <span id="claimation">
+        <% if echo == "unclaimed" %>
+          <%= form_for s do |f| %>
+          <%= f.check_box :claimed %>
+          <%= f.hidden_field :user_id, :value => @user.id %>
+          <%= f.submit "claim this site" %>
+        <% end %>
+        <% else %>
+        <%= "claimed by user #: #{s.user_id}" %>
+        <% end %>
+        </span>
+      </span>
     </div>
-  </p>
+  </div>
   <% end %>
 </div>
-<div class="newSite">
-  <%= link_to "Add New Site", new_site_path %>
-</div>
+</body>
