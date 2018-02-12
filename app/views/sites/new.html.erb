@@ -1,3 +1,39 @@
 <h1>new site</h1>
 
-<%= render "sites/form" %>
+<%= form_for @site do |f| %>
+<% if @bob %>
+<ul>
+  <% @bob.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+<div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+</div>
+<div class="field">
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+</div>
+<div class="field">
+  <%= f.label :flyer %>
+  <%= f.text_field :flyer %>
+</div>
+<div class="field">
+  <%= f.hidden_field :user_id, :value => @user.id %>
+</div>
+<div class="">
+  <%= f.hidden_field :claimed, :value => false %>
+</div>
+<div class="field">
+  <%= f.hidden_field :walk_id, :value => @walk %>
+</div>
+<div class="submit">
+  <%= f.submit "add a site" %>
+</div>
+<% end %>

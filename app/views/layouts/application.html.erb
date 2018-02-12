@@ -17,16 +17,36 @@
         <h1><a href="/">BeeMoving</a></h1>
       </li>
     </ul>
+    <section class="middle-bar-selection">
+      <ul>
+        <li id="sexyshrink">
+          <%if user_signed_in? %>
+            <span id="mainNavLeft">
+              <a href="/sites">To bee sites :)</a>
+            </span>
+          <% end %>
+
+          <span id="mainNavRight">
+            <a href="/walks">To nature walks</a>
+          </span>
+          <span id="mainNavHike">
+            <a href="https://blog.liftopia.com/10-essential-hiking-tips-beginner-hike/" target="_blank">Hiking Tips</a>
+          </span>
+          <span id="mainNavBees">
+            <a href="http://www.greenpeace.org/usa/sustainable-agriculture/save-the-bees/" target="_blank">Save the Freakin bees!</a>
+          </span>
+        </li>
+      </ul>
+    </section>
 
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
-          <li> <a href="/"><%= current_user.user_name %></a></li>
-          <li><a href="https://www.reddit.com/" target="_blank">To reddit</a></li>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+          <li> <a  id="nameGreen" href="/"><%= current_user.user_name %></a></li>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :id => "nameGreen" %></li>
         <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path, :id => "nameGreen", :id => "nameGreen" %></li>
+          <li><%= link_to 'Sign In', new_user_session_path, :id => "nameGreen" %></li>
         <%- end -%>
       </ul>
     </section>

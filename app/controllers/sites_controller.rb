@@ -1,6 +1,7 @@
 class SitesController < ApplicationController
   def index
     @sites= Site.all
+    @user = current_user
   end
 
   def show
@@ -8,8 +9,10 @@ class SitesController < ApplicationController
   end
 
   def new
+    @walk = params[:walk_id].to_i
     @site = Site.new
     @user = current_user
+
   end
 
   def create
@@ -25,6 +28,7 @@ class SitesController < ApplicationController
   end
 
   def edit
+
     @user = current_user
     @site = Site.find(params[:id])
   end

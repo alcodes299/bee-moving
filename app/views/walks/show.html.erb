@@ -1,24 +1,38 @@
+
 <h1>Walk show page</h1>
-<%= link_to "Back", walks_path %>
+
 <div id="walkShowTitle">
-  Walk-Name: <%= @walk.title %>
-  <br>
-  Description: <%= @walk.description %>
-  <br>
-  Location: <%= @walk.location %>
-  <br>
-  Creator Id#: <%= @walk.user_id %>
+  <div class="one">Walk-Name: <%= @walk.title %></div>
+  <div class="two">Description: <%= @walk.description %></div>
+  <div class="one">Location: <%= @walk.location %></div>
+  <div class="two">Creator Id#: <%= @walk.user_id %></div>
 </div>
-<p>
- <%= link_to "Delete", walk_path(@walk), method: :delete, data:{confirm: "You sure?"}  %>
- <%= link_to "Edit Walk", "/walks/#{@walk.id}/edit" %>
-</p>
+
+  <% if current_user %>
+  <span class="deleteButton">
+    <%= link_to "Delete", walk_path(@walk), method: :delete, data:{confirm: "You sure?"} %>
+  </span>
+  <span class="editButton"><%= link_to "Edit Walk", "/walks/#{@walk.id}/edit" %></span>
+  <% end %>
+<% if @sites.count > 1 %>
+<% echo = "Sites" %>
+<% else %>
+<% echo = "site"  %>
+<% end %>
 <div class="siteShow">
-  <h5><strong>Bee sites along this walk</strong></h5>
+  <h5><strong><%= echo %></strong></h5>
   <% @sites.each do |s| %>
-   <ul>
-     <li><%= s.title %></li>
+   <ul id="siteWalkList">
+     <li>
+       <%= s.title %>
+       <span id="teamLiquid"><%= link_to "show page", "/walks/#{@walk.id}/sites/#{s.id}" %></span>
+     </li>
    </ul>
   <% end %>
-  <%= link_to "Add New Site", new_site_path %>
+  <%if current_user %>
+    <span id="siteTags">
+      <%= link_to "Add New Site", "/walks/#{@walk.id}/sites/new" %>
+  </span>
+  <% end %>
+
 </div>

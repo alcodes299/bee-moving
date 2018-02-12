@@ -1,3 +1,4 @@
+<body id="someFun">
 <div class="walks">
   <h3>Local nature walks</h3>
   <% @walks.each do |w| %>
@@ -7,14 +8,28 @@
         <%= w.title %>
       </div>
       "<%= w.description %>"
+      <% if w.sites.count > 1%>
+      <% echo = "Sites" %>
+      <% elsif w.sites.count < 1 %>
+      <% echo = "No Sites" %>
+      <% else %>
+      <% echo = "Site" %>
+      <% end %>
+      <div id="siteCount">
+        <%= w.sites.count %>: <%= echo %> on this walk
+      </div>
     </p>
+    <% if current_user %>
       <div id="linkRight">
         <%= link_to "to show page", walk_path(w) %>
       </div>
+    <% end %>
   </div>
   <% end %>
 </div>
-<div class="test">
-  <%= link_to "Add New walk", new_users_walk_path %>
-
-</div>
+<% if current_user %>
+  <div class="addNewWalk">
+    <%= link_to "Add New walk", new_users_walk_path %>
+  </div>
+<% end %>
+</body>

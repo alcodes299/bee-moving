@@ -15,10 +15,27 @@
  *= require foundation_and_overrides
 
  */
+ /*  Main substance*/
  body {
    background-image: url('bee-backround.jpg');
    background-size: cover;
-   background-repeat: no-repeat;
+ }
+ html{
+   background: lightgreen;
+
+ }
+ /* Titles */
+ h1{
+   text-align: center;
+   background: lightgreen;
+ }
+ h2{
+   text-align: center;
+   background: white;
+ }
+ h3{
+   text-align: center;
+   background: white;
  }
 
  #oneWalk{
@@ -33,19 +50,34 @@
  #walkTitle {
    background: green;
    border: 1px solid black;
+
  }
  #siteBox {
    border: 1px solid black;
-   background: white;
-   width: 200px;
+   background: pink;
+   overflow: hidden;
+   padding: 3px;
+ }
+ #siteTitle{
+   background: #888EF7;
+   text-align: center;
+   margin: auto;
  }
  #siteHolder{
    border: 1px solid black;
-   background: green;
-   width: 400px;
+   background: white;
+   margin: 10px;
  }
  #spanIt{
    text-align: right;
+ }
+ #showDescription{
+   background: #D8E2A6;
+   color: black;
+ }
+ #claimation{
+   background: #FDF4A6;
+   color: black;
  }
  #skecty {
    text-align: center;
@@ -59,6 +91,7 @@
    border-left: 2px solid #4114CC;
    border-right: 2px solid #4114CC;
    margin: 5px;
+   padding: 2px;
  }
  #mainNavLeft a{
    color: #9EFF00;
@@ -68,6 +101,7 @@
    border-left: 2px solid #4114CC;
    border-right: 2px solid #4114CC;
    margin: 5px;
+   padding: 2px;
  }
  #mainNavBees a{
 color: #9EFF00;
@@ -80,18 +114,120 @@ color: #9EFF00;
    color: #9EFF00;
  }
  #mainNavHike{
+   padding: 2px;
    background: #A240FF;
    border-left: 2px solid #4114CC;
    border-right: 2px solid #4114CC;
    margin: 5px;
  }
+
+ #nameGreen{
+   color: white;
+   background: lightgreen;
+   font-weight: bold;
+ }
  #mainNavRight{
+   padding: 2px;
    background: #A240FF;
    border-left: 2px solid #4114CC;
    border-right: 2px solid #4114CC;
    margin: 5px;
  }
  #linkRight{
+   padding: 2px;
    text-align: right;
    font-size: 10px;
+ }
+ .top-bar{
+   background: #F2ECDF;
+ }
+
+
+ .middle-bar-selection{
+   text-align: center;
+   margin-right: 150px;
+   height: 0px;
+ }
+
+
+ }
+ .name{
+   background: green;
+ }
+ #testy{
+   text-align: right;
+ }
+ /* walk show page */
+ #walkShowTitle{
+   background: white;
+   width: 700px;
+   margin-left: 10px;
+   border: 1px solid black;
+   padding: 3px;
+ }
+ #walkShowTitle .one{
+   background: lightgreen;
+ }
+ .deleteButton{
+   background: blue;
+   padding: 3px;
+   margin: 3px;
+ }
+ .editButton{
+   background: lightpink;
+   padding: 3px;
+   margin: 3px;
+ }
+ #siteCount{
+   background: lightpink;
+ }
+ /* walk show page */
+ .siteShow{
+   margin: auto;
+   background: white;
+   width: 1000px;
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-bottom: 5px;
+ }
+ #whatFun{
+   background-image: url("dreamscape-wallpaper-2.jpg");
+ }
+ #noFun{
+   background-image: url("sexyback.jpg")
+ }
+ #someFun{
+   background-image: url("forest-walk.jpg")
+ }
+
+
+ .siteShow h5{
+   background: yellow;
+   padding: 5px;
+ }
+ .siteShow ul{
+   padding: 5px;
+   list-style-type: none;
+ }
+ #teamLiquid{
+   border: 1px solid black;
+   background: orange;
+   padding: 2px;
+ }
+
+
+ #siteWalkList{
+   background: lightblue;
+ }
+ #siteTags{
+   padding: 5px;
+   margin: 5px;
+   background: silver;
+ }
+ .sites h1{
+   background: gold;
+   width: 200px;
+   margin: auto;
+   color: green;
+   border: 6px solid lightgreen;
  }
