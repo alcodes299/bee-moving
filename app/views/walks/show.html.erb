@@ -1,19 +1,20 @@
 
-<h1>Walk show page</h1>
+<h1 class="sites">Local Walks</h1>
 
 <div id="walkShowTitle">
   <div class="one">Walk-Name: <%= @walk.title %></div>
   <div class="two">Description: <%= @walk.description %></div>
   <div class="one">Location: <%= @walk.location %></div>
   <div class="two">Creator Id#: <%= @walk.user_id %></div>
-</div>
-
   <% if current_user %>
   <span class="deleteButton">
     <%= link_to "Delete", walk_path(@walk), method: :delete, data:{confirm: "You sure?"} %>
   </span>
   <span class="editButton"><%= link_to "Edit Walk", "/walks/#{@walk.id}/edit" %></span>
   <% end %>
+</div>
+
+
 <% if @sites.count > 1 %>
 <% echo = "Sites" %>
 <% else %>

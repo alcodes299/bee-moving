@@ -16,26 +16,43 @@
 
  */
  /*  Main substance*/
- body {
-   background-image: url('bee-backround.jpg');
-   background-size: cover;
- }
- html{
-   background: lightgreen;
+
+
+
+ #mainWelcome{
+   width: 400px;
+   margin: auto;
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+   background: #FCEA92;
+   border: 1.5px solid #CC6D4A;
 
  }
+ #siteShow{
+   margin-top: 0.5em;
+
+ }
+ .quote{
+   border: 1.5px solid #CC6D4A;
+   background: #99CFCC;
+   padding: 3px;
+   margin: 1em;
+ }
+
  /* Titles */
  h1{
    text-align: center;
-   background: lightgreen;
+   background: #81BE75;
  }
  h2{
    text-align: center;
-   background: white;
+   background: #B39CC4;
  }
  h3{
    text-align: center;
-   background: white;
+   background: #B39CC4;
+   width: auto;
+   margin: 0.5em;
  }
 
  #oneWalk{
@@ -48,7 +65,7 @@
    padding: 2px;
  }
  #walkTitle {
-   background: green;
+   background: #A8B9BD;
    border: 1px solid black;
 
  }
@@ -87,50 +104,50 @@
    border-radius: 10px
  }
  #mainNavLeft{
-   background: #A240FF;
-   border-left: 2px solid #4114CC;
-   border-right: 2px solid #4114CC;
+   background: #81BE75;
+   border-left: 10px solid black;
+   border-right: 10px solid black;
    margin: 5px;
    padding: 2px;
  }
  #mainNavLeft a{
-   color: #9EFF00;
+   color: white;
  }
  #mainNavBees{
-   background: #A240FF;
-   border-left: 2px solid #4114CC;
-   border-right: 2px solid #4114CC;
+   background: #81BE75;
+   border-left: 10px solid black;
+   border-right: 10px solid black;
    margin: 5px;
    padding: 2px;
  }
  #mainNavBees a{
-color: #9EFF00;
+color: white;
  }
  #mainNavRight a{
-   color: #9EFF00;
+   color: white;
  }
 
  #mainNavHike a{
-   color: #9EFF00;
+   color: white;
  }
  #mainNavHike{
    padding: 2px;
-   background: #A240FF;
-   border-left: 2px solid #4114CC;
-   border-right: 2px solid #4114CC;
+   background: #81BE75;
+   border-left: 10px solid black;
+   border-right: 10px solid black;
    margin: 5px;
  }
 
  #nameGreen{
    color: white;
-   background: lightgreen;
+   background: #81BE75;
    font-weight: bold;
  }
  #mainNavRight{
    padding: 2px;
-   background: #A240FF;
-   border-left: 2px solid #4114CC;
-   border-right: 2px solid #4114CC;
+   background: #81BE75;
+   border-left: 10px solid black;
+   border-right: 10px solid black;
    margin: 5px;
  }
  #linkRight{
@@ -158,9 +175,11 @@ color: #9EFF00;
  #walkShowTitle{
    background: white;
    width: 700px;
-   margin-left: 10px;
+   margin: auto;
+   text-align: center;
    border: 1px solid black;
    padding: 3px;
+
  }
  #walkShowTitle .one{
    background: lightgreen;
@@ -177,6 +196,7 @@ color: #9EFF00;
  }
  #siteCount{
    background: lightpink;
+   border: 1px solid black;
  }
  /* walk show page */
  .siteShow{
@@ -186,6 +206,8 @@ color: #9EFF00;
    padding-left: 5px;
    padding-right: 5px;
    padding-bottom: 5px;
+   border: 1px solid black;
+   margin-top: 10px;
  }
  #whatFun{
    background-image: url("dreamscape-wallpaper-2.jpg");
@@ -199,7 +221,7 @@ color: #9EFF00;
 
 
  .siteShow h5{
-   background: yellow;
+   background: #6F6EAC;
    padding: 5px;
  }
  .siteShow ul{
@@ -221,9 +243,20 @@ color: #9EFF00;
    background: silver;
  }
  .sites h1{
-   background: gold;
-   width: 200px;
+   background: #FADE8B;
+   width: 400px;
    margin: auto;
-   color: green;
-   border: 6px solid lightgreen;
+   font-family: "Comic Sans MS";
+   border: 1px solid black;
+   margin-top: .5em;
+   margin-bottom: .5em;
+ }
+ .sites{
+   background: #FADE8B;
+   width: 400px;
+   margin: auto;
+   font-family: "Comic Sans MS";
+   border: 1px solid black;
+   margin-top: .5em;
+   margin-bottom: .5em;
  }
