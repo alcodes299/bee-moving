@@ -6,8 +6,10 @@ Rails.application.routes.draw do
     resources :walks
   end
   resources :sites
+  resource :reviews
   resources :walks do
     resources :sites
+    resource :reviews
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
