@@ -35,5 +35,38 @@
       <%= link_to "Add New Site", "/walks/#{@walk.id}/sites/new" %>
   </span>
   <% end %>
-
+</div>
+<div>
+  <div>
+    <h5>reviews</h5>
+  </div>
+  <div>
+    <% @reviews.each do |r| %>
+      <%= r.description %>
+    <% end %>
+  </div>
+  <h4>add a review</h4>
+    <%= form_for @review do |f| %>
+    <% if @bob %>
+    <ul>
+      <% @bob.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+    <% end %>
+    <div class="field">
+      <%= f.label :rating %>
+      <%= f.text_field :rating %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+    <div class="hidden_field">
+      <%= f.hidden_field :walk_id, :value => @walk.id %>
+    </div>
+    <div class="submit">
+      <%= f.submit "Add review" %>
+    </div>
+    <% end %>
 </div>

@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180205193926) do
+ActiveRecord::Schema.define(version: 20180214165132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "walk_id"
+    t.string "rating", null: false
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["walk_id"], name: "index_reviews_on_walk_id"
+  end
 
   create_table "sites", force: :cascade do |t|
     t.integer "walk_id", null: false

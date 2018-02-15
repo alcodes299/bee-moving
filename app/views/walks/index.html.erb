@@ -27,7 +27,7 @@
   </div>
   <% end %>
 </div>
-<% if current_user %>
+<% if current_user && current_user.keeper = true %>
   <div class="addNewWalk">
     <%= link_to "Add New walk", new_users_walk_path %>
   </div>
