@@ -15,8 +15,12 @@
   <%= f.text_field :description %>
 </div>
 <div class="field">
-  <%= f.label :location %>
-  <%= f.text_field :location %>
+  <%= f.label :latitude %>
+  <%= f.text_field :latitude %>
+</div>
+<div class="field">
+  <%= f.label :longitude %>
+  <%= f.text_field :longitude %>
 </div>
 <div class="field">
   <%= f.label :claimed  %>
@@ -30,7 +34,7 @@
   <%= f.hidden_field :user_id, :value => @user.id %>
 </div>
 <div class="field">
-  <%= f.hidden_field :walk_id, :value => Walk.second.id %>
+  <%= f.hidden_field :walk_id, :value => @site.walk_id %>
 </div>
 <div class="submit">
   <%= f.submit "add a site" %>

@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   get '/', to: "homes#index"
   devise_for :users
 
-  resource :users do
+  resources :users do
     resources :walks
   end
   resources :sites
-  resource :reviews
+  resources :reviews
+  resources :users, only: [:index, :destroy]
   resources :walks do
     resources :sites
     resource :reviews

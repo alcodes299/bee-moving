@@ -6,7 +6,8 @@ class SitesController < ApplicationController
 
   def show
     @site = Site.find(params[:id])
-    
+    @walk = Walk.find(@site.walk_id)
+    @user = current_user
   end
 
   def new
@@ -29,14 +30,15 @@ class SitesController < ApplicationController
   end
 
   def edit
-
     @user = current_user
     @site = Site.find(params[:id])
   end
 
   def update
+
     @user = current_user
     @site = Site.find(params[:id])
+
     if @site.update(site_params)
       redirect_to site_path(@site)
       flash[:notice] = 'Site updated successfully'
@@ -60,7 +62,7 @@ class SitesController < ApplicationController
  protected
 
  def site_params
-   params.require(:site).permit(:walk_id, :user_id, :title, :description, :location, :claimed, :flyer)
+   params.require(:site).permit(:walk_id, :user_id, :title, :description, :longitude, :latitude, :claimed, :flyer)
  end
 
 end

@@ -7,29 +7,25 @@
   <% else %>
   <% echo= "unclaimed"%>
   <% end %>
+  <div class="columns small-6 large-4">
   <div id="siteHolder">
     <div>
       <div id="siteTitle"><%= s.title %></div>
       <span id="spanIt">
         <span id="showButton">
-          <%= link_to "to show page", site_path(s), :id => "siteBox"%>
-        </span>
-        <span id='showDescription'>
-          Description: <%= s.description %>
-        </span>
+          <%= link_to "to show page", site_path(s), {:class => "button", :id => "genButton"}%>
+        <div>
         <span id="claimation">
         <% if echo == "unclaimed" %>
-          <%= form_for s do |f| %>
-          <%= f.check_box :claimed %>
-          <%= f.hidden_field :user_id, :value => @user.id %>
-          <%= f.submit "claim this site" %>
-        <% end %>
+        <%= "unclaimed" %>
         <% else %>
         <%= "claimed by beekeeper#: #{s.user_id}" %>
         <% end %>
-        </span>
+        </div>
+
       </span>
     </div>
+  </div>
   </div>
   <% end %>
 </div>
