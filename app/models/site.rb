@@ -6,6 +6,7 @@ class Site < ApplicationRecord
   validates_presence_of :latitude
   validates_presence_of :longitude
   validates_presence_of :flyer
+  validates_presence_of :role
   belongs_to :user
   belongs_to :walk
 end

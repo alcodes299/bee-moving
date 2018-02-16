@@ -292,13 +292,19 @@ color: white;
    margin-top: 10px;
  }
  #whatFun{
-   background: repeating-radial-gradient(purple, black 10%, white 15%);
+   background: #55AC7F;
+ }
+ html{
+   background: #55AC7F;
+ }
+ body{
+   background: #55AC7F;
  }
  #noFun{
-   background: repeating-radial-gradient(white, black 10%, blue 15%);
+   background: #55AC7F;
  }
  #someFun{
-   background-image: repeating-radial-gradient(green, white 10%, black 15%);
+   background-image: #55AC7F;
  }
 
  .siteShow h5{
