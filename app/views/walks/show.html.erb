@@ -7,10 +7,10 @@
   <div class="one">Location: <%= @walk.location %></div>
   <div class="two">Creator Id#: <%= @walk.user_id %></div>
   <% if current_user %>
-  <span class="deleteButton">
-    <%= link_to "Delete", walk_path(@walk), method: :delete, data:{confirm: "You sure?"} %>
+  <span>
+    <%= link_to "Delete", walk_path(@walk),{:class => "button", :id => "zeroM",:method => :delete, :data => {confirm: "are you sure you want to delete this site?"}}%>
   </span>
-  <span class="editButton"><%= link_to "Edit Walk", "/walks/#{@walk.id}/edit" %></span>
+  <span><%= link_to "Edit Walk", "/walks/#{@walk.id}/edit",{:class => "button", :id => "zeroM",:data => {confirm: "are you sure you want to delete this site?"}} %></span>
   <% end %>
 </div>
 
@@ -26,47 +26,51 @@
    <ul id="siteWalkList">
      <li>
        <%= s.title %>
-       <span id="teamLiquid"><%= link_to "show page", "/walks/#{@walk.id}/sites/#{s.id}" %></span>
+       <span> <%= link_to "show page", "/walks/#{@walk.id}/sites/#{s.id}", {:class => "button", :id => "zeroM"} %></span>
      </li>
    </ul>
   <% end %>
   <%if current_user %>
-    <span id="siteTags">
-      <%= link_to "Add New Site", "/walks/#{@walk.id}/sites/new" %>
+    <span >
+      <%= link_to "Add New Site", "/walks/#{@walk.id}/sites/new", {:class => "button", :id => "zeroM"} %>
   </span>
   <% end %>
 </div>
 <div>
-  <div>
-    <h5>reviews</h5>
-  </div>
-  <div>
+
+  <div class="reviewOut">
+    <div>
+      <h5 id="showReviews">reviews</h5>
+    </div>
     <% @reviews.each do |r| %>
-      <%= r.description %>
+      <li id="oneReview"><%= r.description %></li><br>
     <% end %>
   </div>
-  <h4>add a review</h4>
-    <%= form_for @review do |f| %>
-    <% if @bob %>
-    <ul>
-      <% @bob.each do |msg| %>
-        <li><%= msg %></li>
+  <div class="form">
+    <h4>add a review</h4>
+      <%= form_for @review do |f| %>
+      <% if @bob %>
+      <ul>
+        <% @bob.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
       <% end %>
-    </ul>
-    <% end %>
-    <div class="field">
-      <%= f.label :rating %>
-      <%= f.text_field :rating %>
-    </div>
-    <div class="field">
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-    </div>
-    <div class="hidden_field">
-      <%= f.hidden_field :walk_id, :value => @walk.id %>
-    </div>
-    <div class="submit">
-      <%= f.submit "Add review" %>
-    </div>
-    <% end %>
+      <div class="field">
+        <%= f.label :rating %>
+        <%= f.text_field :rating %>
+      </div>
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+      </div>
+      <div class="hidden_field">
+        <%= f.hidden_field :walk_id, :value => @walk.id %>
+      </div>
+      <div class="submit">
+        <%= f.submit "Add review", {:class => "button", :id => "zeroM"} %>
+      </div>
+      <% end %>
+  </div>
+
 </div>

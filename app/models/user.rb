@@ -4,7 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :walks
-  has_many :sites, through: :walks
+  has_many :walks, dependent: :destroy
+  has_many :sites, through: :walks, dependent: :destroy
+  def admin?
+    role == "admin"
+  end
 
 end

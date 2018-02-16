@@ -16,6 +16,16 @@ class ReviewsController < ApplicationController
 
     end
   end
+  def destroy
+    @review = Review.find(params[:id])
+    if @review.destroy
+      redirect_to "/users"
+      flash[:notice] = "Review Deleted"
+    else
+      flash[:notice] = "Review Failed to Delete"
+      render :index
+    end
+  end
   protected
   def review_params
     params.require(:review).permit(:walk_id, :rating, :description)

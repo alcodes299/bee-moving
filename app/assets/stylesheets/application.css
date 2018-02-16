@@ -17,6 +17,50 @@
  */
  /*  Main substance*/
 
+.SiteColums{
+  text-align: center;
+}
+#genButton{
+  background: linear-gradient(white, lightblue);
+  color: black;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 10px;
+  font-family: "Comic Sans MS";
+}
+#zeroM{
+  margin: 0px;
+  padding: 3px;
+  background: #BB6789;
+  border: 1px solid black;
+}
+.reviewOut{
+  background: lightblue;
+  text-align: center;
+  border: 2px solid black;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 500px;
+}
+#showReviews{
+  background: #E2FD88;
+  width: 200px;
+  margin: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 10px;
+  font-size: 25px;
+}
+#oneReview{
+  background: lightgreen;
+  padding: 2px;
+  margin: 5px;
+}
+#butThree{
+  background: #A8D3C1;
+  margin: 10px;
+}
 
 
  #mainWelcome{
@@ -83,11 +127,9 @@
  #siteHolder{
    border: 1px solid black;
    background: white;
-   margin: 10px;
+   margin: 5px;
  }
- #spanIt{
-   text-align: right;
- }
+
  #showDescription{
    background: #D8E2A6;
    color: black;
@@ -106,10 +148,12 @@
  }
  #mainNavLeft{
    background: #81BE75;
-   border-left: 10px solid black;
-   border-right: 10px solid black;
+   border-left: 10px solid #6D72A9;
+   border-right: 10px solid #6D72A9;
    margin: 5px;
    padding: 2px;
+   padding: 2px;
+   border-radius: 5px;
  }
 
  #mainNavLeft a{
@@ -117,8 +161,8 @@
  }
  #mainNavBees{
    background: #81BE75;
-   border-left: 10px solid black;
-   border-right: 10px solid black;
+   border-left: 10px solid #6D72A9;
+   border-right: 10px solid #6D72A9;
    margin: 5px;
    padding: 2px;
    border-radius: 5px;
@@ -137,9 +181,11 @@ color: white;
  #mainNavHike{
    padding: 2px;
    background: #81BE75;
-   border-left: 10px solid black;
-   border-right: 10px solid black;
+   border-left: 10px solid #6D72A9;
+   border-right: 10px solid #6D72A9;
    margin: 5px;
+   padding: 2px;
+   border-radius: 5px;
  }
 
  #nameGreen{
@@ -150,9 +196,11 @@ color: white;
  #mainNavRight{
    padding: 2px;
    background: #81BE75;
-   border-left: 10px solid black;
-   border-right: 10px solid black;
+   border-left: 10px solid #6D72A9;
+   border-right: 10px solid #6D72A9;
    margin: 5px;
+   padding: 2px;
+   border-radius: 5px;
  }
  #linkRight{
    padding: 2px;
@@ -161,14 +209,28 @@ color: white;
  }
  ul.right{
    position: static;
-   margin-bottom:  40px;
+
  }
  .top-bar{
    background: #F2ECDF;
+   margin: 0px;
+
  }
  .right{
-   margin-top: 0px;
+   margin: 0px;
  }
+ .top-bar-section{
+   margin: 0px;
+ }
+
+
+ #divWidth{
+   width: 200px;
+ }
+ nav.top-bar{
+   width: cover;
+ }
+
 
 
  .middle-bar-selection{
@@ -206,6 +268,14 @@ color: white;
    padding: 3px;
    margin: 3px;
  }
+ #noWay {
+   color: red;
+   font-size: 50px;
+ }
+ #someway{
+   background: green;
+  font-size: 200px;
+ }
  #siteCount{
    background: lightpink;
    border: 1px solid black;
@@ -222,15 +292,14 @@ color: white;
    margin-top: 10px;
  }
  #whatFun{
-   background-image: url("dreamscape-wallpaper-2.jpg");
+   background: repeating-radial-gradient(purple, black 10%, white 15%);
  }
  #noFun{
-   background-image: url("sexyback.jpg")
+   background: repeating-radial-gradient(white, black 10%, blue 15%);
  }
  #someFun{
-   background-image: url("forest-walk.jpg")
+   background-image: repeating-radial-gradient(green, white 10%, black 15%);
  }
-
 
  .siteShow h5{
    background: #6F6EAC;
@@ -271,4 +340,19 @@ color: white;
    border: 1px solid black;
    margin-top: .5em;
    margin-bottom: .5em;
+ }
+ /* buttons */
+ .butty-the-button{
+   background: yellow;
+   font-size: 20px;
+   padding: 5px;
+ }
+ .butty-the-button a{
+   color: red;
+ }
+ .form{
+   width: 1000px;
+   margin: auto;
+   background: lightblue;
+   padding: 5px;
  }
