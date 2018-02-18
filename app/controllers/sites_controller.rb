@@ -62,7 +62,7 @@ class SitesController < ApplicationController
  protected
 
  def site_params
-   params.require(:site).permit(:walk_id, :user_id, :title, :description, :longitude, :latitude, :claimed, :flyer, :role)
+   params.require(:site).permit(:walk_id, :user_id, :title, :description, :longitude, :latitude, :claimed, :flyer)
  end
 
 end
