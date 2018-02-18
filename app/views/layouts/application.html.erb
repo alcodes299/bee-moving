@@ -17,7 +17,7 @@
         <h1><a href="/">BeeMoving</a></h1>
       </li>
     </ul>
-      <% if user_signed_in? && current_user.admin? %>
+      <% if user_signed_in? && current_user.role == "admin" %>
         <span id="mainNavLeft">
           <%= link_to "admin", users_path %>
         </span>
