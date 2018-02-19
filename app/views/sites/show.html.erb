@@ -27,11 +27,13 @@
       </h4>
     </div>
     <div class="right">
+
+      Type of Bug: <%= @site.flyer %>
+
       <%= link_to "Edit site", "/sites/#{@site.id}/edit", {:class => "button", :id => "zeroM"} %>
       <%= link_to "Delete site", site_path(@site),{:class => "button", :id => "zeroM",:method => :delete, :data => {confirm: "are you sure you want to delete this site?"}} %>
     </div>
   </div>
-
 
   <div>
     <% if(@site.claimed) %>
@@ -46,10 +48,9 @@
       <%= f.submit "claim this site", {:class => "button", :id => "genButton"} %>
     <% end %>
     <% else %>
-    <%= "claimed by beekeeper#: #{@site.user_id}" %>
+    <%= "Claimed by beekeeper#: #{@site.user_id}!" %>
     <% end %>
-    <span>
-    </span>
+
   </div>
 </div>
 

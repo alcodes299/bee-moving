@@ -1,24 +1,24 @@
 <h3>all sites</h3>
 <div class="admin">
   <% @sites.each do |s| %>
-  <li><%= s.title %> <%= s.walk_id %>: <%= link_to "Delete", s, method: :delete, data:{confirm: "You sure?"} %></li>
+  <li><%= s.title %> <%= s.walk_id %>: <%= link_to "Delete", s,:class => "button", :id => "zeroM", method: :delete, data:{confirm: "You sure?"} %></li>
   <% end %>
 </div>
 <h3>all users</h3>
 <div class="admin">
   <% @users.each do |u| %>
-  <li><%= u.user_name %>: <%= link_to "Delete", u, method: :delete, data:{confirm: "You sure?"} %></li>
+  <li><%= u.user_name %>: <%= link_to "Delete", u,:class => "button", :id => "zeroM", method: :delete, data:{confirm: "You sure?"} %></li>
   <% end %>
 </div>
 <h3>all walks</h3>
 <div class="admin">
   <% @walks.each do |w| %>
-  <li><%= w.title %> #<%= w.id %>: <%= link_to "Delete", w, method: :delete, data:{confirm: "You sure?"} %></li>
+  <li><%= w.title %> #<%= w.id %>: <%= link_to "Delete", w,:class => "button", :id => "zeroM", method: :delete, data:{confirm: "You sure?"} %></li>
   <% end %>
 </div>
 <h3>all reviews</h3>
 <div class="admin">
   <% @reviews.each do |r| %>
-  <li><%= r.description %> <%= link_to "Delete", r, method: :delete, data:{confirm: "You sure?"} %></li>
+  <li><%= r.description %> <%= link_to "Delete", r,:class => "button", :id => "zeroM", method: :delete, data:{confirm: "You sure?"} %></li>
   <% end %>
 </div>

@@ -274,12 +274,12 @@ color: white;
    margin: 3px;
  }
  #noWay {
-   color: red;
+   color: orange;
    font-size: 50px;
  }
- #someway{
-   background: green;
-  font-size: 200px;
+ #someWay{
+  color: lightgreen;
+  font-size: 50px;
  }
  #siteCount{
    background: lightpink;
@@ -300,10 +300,13 @@ color: white;
    background: #55AC7F;
  }
  html{
-   background: #E1E7CF;
+   background: #5AABD2;
  }
  body{
-   background: #E1E7CF;
+   background: #5AABD2;
+ }
+ nav.top-bar{
+   background: #BB88E7;
  }
  #noFun{
    background: #55AC7F;
