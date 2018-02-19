@@ -22,7 +22,7 @@
           <%= link_to "admin", users_path %>
         </span>
       <% end %>
-      <%if user_signed_in?  %>
+      <%if user_signed_in? && current_user.keeper == true %>
           <span id="mainNavLeft">
               <a href="/sites">To bee sites :)</a>
           </span>

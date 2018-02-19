@@ -20,6 +20,7 @@
 <% else %>
 <% echo = "site"  %>
 <% end %>
+<% if user_signed_in? && current_user.keeper == true %>
 <div class="siteShow">
   <h5><strong><%= echo %></strong></h5>
   <% @sites.each do |s| %>
@@ -36,6 +37,7 @@
   </span>
   <% end %>
 </div>
+<% end %>
 <div>
 
   <div class="reviewOut">
