@@ -25,6 +25,7 @@ class WalksController < ApplicationController
     else
       @bob = @walk.errors.full_messages
       render :new
+      flash[:error] = "Walk Failed to add!"
     end
   end
 
@@ -41,7 +42,7 @@ class WalksController < ApplicationController
       redirect_to walk_path(@walk)
       flash[:notice] = 'Walk updated successfully'
     else
-      flash[:notice] = 'Walk failed to update'
+      flash[:error] = 'Walk failed to update'
       render :edit
     end
   end
@@ -53,7 +54,7 @@ class WalksController < ApplicationController
       redirect_to '/walks'
       flash[:notice] = "Walk deleted successfully"
     else
-      flash[:notice] = 'Wizard deletion failed'
+      flash[:error] = 'Walk deletion failed'
       render :index
     end
   end

@@ -12,6 +12,11 @@
   </span>
   <span><%= link_to "Edit Walk", "/walks/#{@walk.id}/edit",{:class => "button", :id => "zeroM"} %></span>
   <% end %>
+  <%if current_user %>
+    <span id="center">
+      <%= link_to "Add New Site", "/walks/#{@walk.id}/sites/new", {:class => "button", :id => "zeroM"} %>
+  </span>
+  <% end %>
 </div>
 
 
@@ -26,20 +31,21 @@
   <% @sites.each do |s| %>
    <ul id="siteWalkList">
      <li>
+
        <%= s.title %>
        <span> <%= link_to "show page", "/walks/#{@walk.id}/sites/#{s.id}", {:class => "button", :id => "zeroM"} %></span>
      </li>
-   </ul>
-  <% end %>
-  <%if current_user %>
-    <span >
-      <%= link_to "Add New Site", "/walks/#{@walk.id}/sites/new", {:class => "button", :id => "zeroM"} %>
-  </span>
-  <% end %>
-</div>
-<% end %>
-<div>
+     <% end %>
+     <% end %>
 
+   </ul>
+
+
+</div>
+
+
+
+<div>
   <div class="reviewOut">
     <div>
       <h5 id="showReviews">reviews</h5>

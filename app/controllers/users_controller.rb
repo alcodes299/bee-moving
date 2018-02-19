@@ -7,7 +7,7 @@ class UsersController < ApplicationController
       @reviews = Review.all
     else
       redirect_to walks_path
-      flash[:notice] = "You must be signed in as an admin"
+      flash[:error] = "You must be signed in as an admin"
     end
     def destroy
       @users = User.all
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         redirect_to "/users"
         flash[:notice] = "User has been deleted"
       else
-        flash[:notice] = "User Failed to Delete"
+        flash[:error] = "User Failed to Delete"
         render :index
       end
     end

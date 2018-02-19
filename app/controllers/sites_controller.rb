@@ -1,7 +1,12 @@
 class SitesController < ApplicationController
   def index
-    @sites= Site.all
-    @user = current_user
+    if current_user.keeper == true
+      @sites= Site.all
+      @user = current_user
+    else
+      redirect_to '/'
+      flash[:error] = "You must be a beekeeper to view sites!"
+    end
   end
 
   def show
@@ -22,7 +27,11 @@ class SitesController < ApplicationController
     @site=Site.new(site_params)
     if @site.save
       flash[:notice] = "Site add Successfull"
+      if current_user.keeper == true
       redirect_to '/sites'
+      else
+        redirect_to '/walks'
+      end
     else
       @bob = @site.errors.full_messages
       render :new
@@ -35,15 +44,13 @@ class SitesController < ApplicationController
   end
 
   def update
-
     @user = current_user
     @site = Site.find(params[:id])
-
     if @site.update(site_params)
       redirect_to site_path(@site)
       flash[:notice] = 'Site updated successfully'
     else
-      flash[:notice] = 'Site failed to update'
+      flash[:error] = 'Site failed to update'
       render :edit
     end
   end
@@ -54,7 +61,7 @@ class SitesController < ApplicationController
      redirect_to '/sites'
      flash[:notice] = "Site Delete Successfully"
    else
-     flash[:notice] = 'Site Failed to Delete'
+     flash[:error] = 'Site Failed to Delete'
      render :index
    end
  end

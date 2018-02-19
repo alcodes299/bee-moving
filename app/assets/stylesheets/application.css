@@ -77,6 +77,7 @@
    margin-top: 0.5em;
 
  }
+
  .quote{
    border: 2px solid #CC6D4A;
    background: lightblue;
@@ -367,11 +368,25 @@ color: white;
    padding: 5px;
  }
 .flash.flash-notice{
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  background: lightgreen;
+  border: 3px solid #73F44D;
+  width: 300px;
+  margin: auto;
+  margin-top: 5px;
+  padding: 2px;
+  border-radius: 5px;
+}
+.flash.flash-error{
+  color: black;
+  font-size: 12px;
   text-align: center;
   background: white;
   border: 3px solid red;
-  width: 400px;
+  width: 300px;
   margin: auto;
-  padding: 2px;
+  padding: 1px;
   border-radius: 5px;
 }
