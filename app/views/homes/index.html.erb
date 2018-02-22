@@ -34,27 +34,30 @@
 </div>
 <div id="map"/>
 <script>
-      fetch('http://api.open-notify.org/iss-now.json')
-      .then(response => {
-        if (response.ok) {
-          return response;
-        } else {
-          let errorMessage = `${response.status} (${response.statusText})`,
-              error = new Error(errorMessage);
-          throw(error);
-        }
-      })
-      .then(response => response.json())
-      .then(body => {
-        long = body.iss_position.longitude
-        lati = body.iss_position.latitude
-      })
-      .catch(error => console.error(`Error in fetch: ${error.message}`));
-      debugger
-      uluru = {lat: 10.363, lng: 22.00};
       function initMap() {
+        lati = 5
+        long = 6
+        fetch('http://api.open-notify.org/iss-now.json')
+        .then(response => {
+          if (response.ok) {
+            return response;
+          } else {
+            let errorMessage = `${response.status} (${response.statusText})`,
+                error = new Error(errorMessage);
+            throw(error);
+          }
+        })
+        .then(response => response.json())
+        .then(body => {
+          long = body.iss_position.longitude,
+          lati = body.iss_position.latitude,
+
+          console.log('firstT')
+        })
 
 
+        uluru = {lat: lati, lng: long};
+        console.log("firstN")
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: uluru

@@ -21,6 +21,7 @@ class Basics extends Component {
     })
     .then(response => response.json())
     .then(body => {
+      
       this.setState({ iss_long: body.iss_position.longitude ,iss_lat: body.iss_position.latitude })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
