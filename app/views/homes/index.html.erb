@@ -1,5 +1,13 @@
-
+<head>
+  <style>
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+  </style>
+</head>
 <h3 id="mainWelcome">Welcome to Bee Moving!</h3>
+
 <div class="quote">
   Aerodynamically, the bumble bee shouldn't be able to fly, but the bumble bee doesn't know it so it goes on flying anyway.
   -unknown
@@ -19,3 +27,44 @@
 <div class="quote">
   The common bees will never use their sting upon the queen; if she is to be disposed of, they starve her to death, and the queen herself will sting nothing but royalty, nothing but a rival queen. -Patti Smith
 </div>
+<div id="app">
+</div>
+<div class="mainQuote">
+  <%= javascript_pack_tag 'application' %>
+</div>
+<div id="map"/>
+<script>
+      fetch('http://api.open-notify.org/iss-now.json')
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+              error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then(response => response.json())
+      .then(body => {
+        long = body.iss_position.longitude
+        lati = body.iss_position.latitude
+      })
+      .catch(error => console.error(`Error in fetch: ${error.message}`));
+      debugger
+      uluru = {lat: 10.363, lng: 22.00};
+      function initMap() {
+
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM5J8WKGkt4tjK2IKKPN2d5RbQthey6yQ&callback=initMap">
+    </script>
