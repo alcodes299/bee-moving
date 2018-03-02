@@ -296,6 +296,16 @@ color: white;
    border: 1px solid black;
    margin-top: 10px;
  }
+ .space{
+   height: 500px;
+ }
+ .scroller{
+   text-align: center;
+   background: yellow;
+   width: 100px;
+   margin: auto;
+ }
+
  #whatFun{
    background: #55AC7F;
  }

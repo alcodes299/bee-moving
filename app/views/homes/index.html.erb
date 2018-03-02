@@ -1,5 +1,15 @@
+<head>
+  <script src="application.js"></script>
+  <style>
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+  </style>
+</head>
 
 <h3 id="mainWelcome">Welcome to Bee Moving!</h3>
+
 <div class="quote">
   Aerodynamically, the bumble bee shouldn't be able to fly, but the bumble bee doesn't know it so it goes on flying anyway.
   -unknown
@@ -18,4 +28,36 @@
 </div>
 <div class="quote">
   The common bees will never use their sting upon the queen; if she is to be disposed of, they starve her to death, and the queen herself will sting nothing but royalty, nothing but a rival queen. -Patti Smith
+</div>
+<div class="scroller">
+  <h5>TO: Mission</h5>
+</div>
+<div id="app">
+</div>
+<div class="mainQuote">
+  <%= javascript_pack_tag 'application' %>
+</div>
+<script>
+  let mainWelcome = document.getElementById('mainWelcome')
+  let theSwitch = Date.now()
+
+  if(theSwitch % 2 ==  0){
+    mainWelcome.style.background = 'pink'
+    theSwitch = Date.now()
+  }else{
+    mainWelcome.style.background = "lightgreen"
+    theSwitch = Date.now()
+  }
+  document.addEventListener('click', () => {
+  let colors = ['Aqua', 'Blue', 'Orange', 'Green', 'Red', 'LightSteelBlue']
+  let index = Math.floor(Math.random() * colors.length)
+  let newDex = Math.floor(Math.random() * colors.length)
+  let color = colors[index]
+  let other = colors[newDex]
+  event.srcElement.style.color = color
+  event.srcElement.style.background = other
+});
+</script>
+<div class="space">
+
 </div>
