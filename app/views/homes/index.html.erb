@@ -29,9 +29,20 @@
 <div class="quote">
   The common bees will never use their sting upon the queen; if she is to be disposed of, they starve her to death, and the queen herself will sting nothing but royalty, nothing but a rival queen. -Patti Smith
 </div>
-<div class="scroller">
-  <h5>TO: Mission</h5>
+<div id="scroller">
+  <h5 id="scrollText">to: misson</h5>
+  <h5 id="scroll"></h5>
 </div>
+<script type="text/javascript">
+  let scroll = document.getElementById("scroller")
+  scroll.addEventListener('mouseover', () => {
+    console.log('duh')
+    window.scrollBy(0, 500)
+    let moveIt = document.getElementById("scroller")
+    doument.body.appendChild("test")
+
+  })
+</script>
 <div id="app">
 </div>
 <div class="mainQuote">
