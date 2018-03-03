@@ -6,10 +6,11 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_include_tag "vendor/modernizr" %>
-    
+
   <%= csrf_meta_tags %>
 
 </head>
+
 <body>
 
 
@@ -39,6 +40,10 @@
       </span>
       <span id="mainNavBees">
         <a href="http://www.greenpeace.org/usa/sustainable-agriculture/save-the-bees/" target="_blank">Save the Freakin bees!</a>
+      </span>
+      <span id="mainNavBees">
+        <a id="otherClock">
+        </a>
       </span>
 
     <span class="top-bar-section">
@@ -71,4 +76,13 @@
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
 </body>
+<script type="text/javascript">
+    var newClock = setInterval(function(){ myTimer() }, 1000);
+    function myTimer(){
+      var d = new Date();
+      var t = d.toLocaleTimeString()
+      var x = document.getElementById("otherClock")
+      x.innerHTML = t
+    }
+</script>
 </html>
