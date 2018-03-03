@@ -1,11 +1,5 @@
 <head>
   <script src="application.js"></script>
-  <style>
-  #map {
-    height: 400px;
-    width: 100%;
-  }
-  </style>
 </head>
 
 <h3 id="mainWelcome">Welcome to Bee Moving!</h3>
@@ -29,9 +23,20 @@
 <div class="quote">
   The common bees will never use their sting upon the queen; if she is to be disposed of, they starve her to death, and the queen herself will sting nothing but royalty, nothing but a rival queen. -Patti Smith
 </div>
-<div class="scroller">
-  <h5>TO: Mission</h5>
+<div id="scroller">
+  <h5 id="scrollText">to: misson</h5>
+  <h5 id="scroll"></h5>
 </div>
+<script type="text/javascript">
+  let scroll = document.getElementById("scroller")
+  scroll.addEventListener('click', () => {
+    console.log('duh')
+    function alertFunc() {
+      window.scrollBy(100, 100);
+    }
+    setTimeout(alertFunc, 1000)
+  })
+</script>
 <div id="app">
 </div>
 <div class="mainQuote">
@@ -58,6 +63,42 @@
   event.srcElement.style.background = other
 });
 </script>
-<div class="space">
+<style>
+  #pic{
+    background: pink;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    margin: 5px;
 
+  }
+</style>
+<div class=".large-2.columns">
+  <a href="https://www.google.com/" target="_blank">
+    <%= image_tag("sillybee.png", :alt => "rss feed", :id => "pic") %>
+  </a>
+  <a href="/">zero
+    <%= image_tag("sillybee.png", :id => 'pic')%>
+  </a>
+  <a href="/">one
+    <%= image_tag("sillybee.png", :id => 'pic') %>
+  </a>
+  <a href="/">two
+    <%= image_tag("sillybee.png", :id => 'pic') %>
+  </a>
+  <a href="/">three
+    <%= image_tag("sillybee.png", :id => 'pic') %>
+  </a>
+  <a href="/">four
+    <%= image_tag("sillybee.png", :id => 'pic') %>
+  </a>
+  <a href="/">five
+    <%= image_tag("sillybee.png", :id => 'pic') %>
+  </a>
+  <a href="/">six
+    <%= image_tag("sillybee.png", :id => 'pic') %>
+  </a>
+  <a href="/">seven
+    <%= image_tag("sillybee.png", :id => 'pic') %>
+  </a>
 </div>
