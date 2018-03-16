@@ -11,6 +11,7 @@
           longitude:
           <p id="longitudude" >
             <%= @site.longitude %>
+
           </p>
         </div>
         <br>
@@ -87,8 +88,8 @@
   var map;
   function initMap(){
     map = new google.maps.Map(document.getElementById('map'),{
-      center: {lat: latNum, lng: longNum},
-      zoom: 9
+      center: {lat: latNum+0.5, lng: longNum-0.2},
+      zoom: 8
     })
   }
 </script>
