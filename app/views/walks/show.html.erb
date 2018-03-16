@@ -32,14 +32,14 @@
    <ul id="siteWalkList">
      <li>
 
-       <%= s.title %>
-       <span> <%= link_to "show page", "/walks/#{@walk.id}/sites/#{s.id}", {:class => "button", :id => "zeroM"} %></span>
+       <%= s.title %><%= link_to "show page", "/walks/#{@walk.id}/sites/#{s.id}", {:class => "button", :id => "zeroM"} %>
+
      </li>
-     <% end %>
-     <% end %>
 
    </ul>
 
+   <% end %>
+   <% end %>
 
 </div>
 

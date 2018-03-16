@@ -30,7 +30,7 @@
 <script type="text/javascript">
   let scroll = document.getElementById("scroller")
   scroll.addEventListener('click', () => {
-    console.log('duh')
+
     function alertFunc() {
       window.scrollBy(100, 100);
     }
@@ -54,6 +54,7 @@
     theSwitch = Date.now()
   }
   document.addEventListener('click', () => {
+    console.log(document)
   let colors = ['Aqua', 'Blue', 'Orange', 'Green', 'Red', 'LightSteelBlue']
   let index = Math.floor(Math.random() * colors.length)
   let newDex = Math.floor(Math.random() * colors.length)
