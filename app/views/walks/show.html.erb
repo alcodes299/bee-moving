@@ -31,9 +31,7 @@
   <% @sites.each do |s| %>
    <ul id="siteWalkList">
      <li>
-
-       <%= s.title %><%= link_to "show page", "/walks/#{@walk.id}/sites/#{s.id}", {:class => "button", :id => "zeroM"} %>
-
+       <%= s.title %><%= link_to "show page", "/walks/#{@walk.id}/sites/#{s.id}", {:class => "button", :id => "zeroM"} %> Site is claimed?: <%= s.claimed %>
      </li>
 
    </ul>
@@ -53,31 +51,35 @@
     <% @reviews.each do |r| %>
       <li id="oneReview"><%= r.description %></li><br>
     <% end %>
-  </div>
-  <div class="form">
-    <h4>add a review</h4>
-      <%= form_for @review do |f| %>
-      <% if @bob %>
-      <ul>
-        <% @bob.each do |msg| %>
-          <li><%= msg %></li>
+    <div class="">
+      <h4>add a review</h4>
+        <%= form_for @review do |f| %>
+        <% if @bob %>
+        <ul>
+          <% @bob.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
         <% end %>
-      </ul>
-      <% end %>
-      <div class="field">
-        <%= f.label :rating %>
-        <%= f.text_field :rating %>
-      </div>
-      <div class="field">
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-      </div>
-      <div class="hidden_field">
-        <%= f.hidden_field :walk_id, :value => @walk.id %>
-      </div>
-      <div class="submit">
-        <%= f.submit "Add review", {:class => "button", :id => "zeroM"} %>
-      </div>
+        <div id="">
+          <div class="field">
+            <%= f.label :rating %>
+            <%= f.text_field :rating %>
+          </div>
+          <div class="field">
+            <%= f.label :description %>
+            <%= f.text_field :description %>
+          </div>
+          <div class="hidden_field">
+            <%= f.hidden_field :walk_id, :value => @walk.id %>
+          </div>
+          <div class="submit">
+            <%= f.submit "Add review", {:class => "button", :id => "zeroM"} %>
+          </div>
+        </div>
+  </div>
+
+
       <% end %>
   </div>
 

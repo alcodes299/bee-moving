@@ -11,7 +11,6 @@
           longitude:
           <p id="longitudude" >
             <%= @site.longitude %>
-
           </p>
         </div>
         <br>
@@ -67,12 +66,9 @@
   </div>
 </div>
 <script>
-  var c = document.getElementById("latitudude").innerHTML
-  var d = document.getElementById("longitudude").innerHTML
-  var x=d.split(" ")
-  var latSplit = c.split(" ")
-  var latNum = parseInt(latSplit[12])
-  var longNum = parseInt(x[12])
+  var latNum = parseInt('<%= @site.latitude %>')
+  var longNum = parseInt('<%= @site.longitude %>')
+  console.log(latNum, longNum)
 </script>
 <style>
   #map{

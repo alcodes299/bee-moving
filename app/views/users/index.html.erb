@@ -22,3 +22,11 @@
   <li><%= r.description %> <%= link_to "Delete", r,:class => "button", :id => "zeroM", method: :delete, data:{confirm: "You sure?"} %></li>
   <% end %>
 </div>
+<script type="text/javascript">
+  var userCount = "<%= @users.count %>"
+  var walkCount = "<%= @walks.count %>"
+  var siteCount = "<%= @sites.count %>"
+  var reviewCount = "<%= @reviews.count %>"
+  console.log(userCount, walkCount, reviewCount, siteCount)
+  // decide on a chart to go here
+</script>

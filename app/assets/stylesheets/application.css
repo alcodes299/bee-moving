@@ -16,7 +16,12 @@
 
  */
  /*  Main substance*/
-
+#chart{
+  width: 0px;
+  margin-left: 18%;
+  padding: 10px;
+  
+}
 .SiteColums{
   text-align: center;
 }
@@ -28,7 +33,7 @@
   border-radius: 10px;
   font-family: "Comic Sans MS";
 }
-#zeroM{
+ #zeroM{
   margin: 0px;
   padding: 3px;
   background: #BB6789;
